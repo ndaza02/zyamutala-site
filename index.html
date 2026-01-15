@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyamutala | Premium Car Broker Bulawayo</title>
+    <meta name="description"
+        content="Zyamutala - The premier car broker in Bulawayo, Zimbabwe. Connecting buyers and sellers with trust, transparency, and speed.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 90vh;
+            min-height: 600px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('Hero Images/Hero 1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-light-grey);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: var(--color-white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--color-black);
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="car-front"></i></div>
+                ZYAMUTALA
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="market.html">Car Market</a>
+                <a href="sell.html">Sell Your Car</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="market.html" class="btn btn-primary mobile-only"
+                    style="margin-top: 1rem; text-align: center;">Browse Cars</a>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="market.html" class="btn btn-primary desktop-only"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Browse
+                    Cars</a>
+                <div class="mobile-toggle"><i data-lucide="menu"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div style="max-width: 800px;" class="reveal-on-scroll">
+                <div class="badge"
+                    style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 1.5rem; display: inline-block; backdrop-filter: blur(5px);">
+                    Bulawayo's #1 Trusted Car Broker
+                </div>
+                <h1 style="margin-bottom: 1.5rem; font-size: 4rem; color: #ffffff;">Buy with Confidence. <br> Sell with
+                    Speed.</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 2.5rem; color: #ffffff; max-width: 600px;">
+                    Stop gambling with your money. We verify every vehicle, negotiate the best deals, and handle all the
+                    paperwork.
+                    The safe way to buy and sell cars in Zimbabwe.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="market.html" class="btn btn-white-outline"
+                        style="background: white; color: black; border-color: white; padding: 1rem 2.5rem;">Browse
+                        Inventory</a>
+                    <a href="sell.html" class="btn btn-white-outline" style="padding: 1rem 2.5rem;">Sell My Car</a>
+                </div>
+                <div style="margin-top: 3rem; display: flex; gap: 2rem; color: #ffffff; font-size: 0.9rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
+                            style="width: 18px;"></i> Verified Sellers</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
+                            style="width: 18px;"></i> Secure Transactions</div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
+                            style="width: 18px;"></i> 5% Flat Commission</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Services -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem;" class="reveal-on-scroll">
+                <h2>Why Zimbabwe Trusts Zyamutala</h2>
+                <p class="text-grey" style="font-size: 1.1rem;">
+                    The car market is full of risks. We eliminate them. <br>Here is how we protect your money and your
+                    time.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal-on-scroll">
+                    <div class="service-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>100% Verified Listings</h3>
+                    <p class="text-grey" style="margin-top: 1rem;">No scams, no stolen vehicles. We physically inspect
+                        every car, verify Zinara status, and check ownership history before it hits our site.</p>
+                </div>
+                <div class="service-card reveal-on-scroll">
+                    <div class="service-icon"><i data-lucide="coins"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p class="text-grey" style="margin-top: 1rem;">We charge a flat 5% commission. No hidden markups or
+                        surprise fees. You know exactly what the seller wants and what you pay.</p>
+                </div>
+                <div class="service-card reveal-on-scroll">
+                    <div class="service-icon"><i data-lucide="clock"></i></div>
+                    <h3>Speed & Convenience</h3>
+                    <p class="text-grey" style="margin-top: 1rem;">Skip the endless WhatsApp messages. We filter
+                        serious buyers, handle viewings, and close deals fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="section" style="background-color: var(--color-light-grey);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 3rem;">
+                <h2 style="margin-bottom: 0;">Featured Vehicles</h2>
+                <a href="market.html" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">View
+                    All <i data-lucide="arrow-right" style="width: 1rem;"></i></a>
+            </div>
+
+            <!-- Simple Grid for Featured Items -->
+            <!-- Simple Grid for Featured Items -->
+            <div class="services-grid">
+                <!-- BMW F30 -->
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="bmw-main-home" src="Cars/BMW F30/main image.jpeg" alt="BMW F30"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/main image.jpeg')"><img
+                                    src="Cars/BMW F30/main image.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg')">
+                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg')">
+                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg')">
+                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span class="badge">Featured</span>
+                            <span style="font-weight: 700; color: var(--color-black);">$17,000</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">BMW F30</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">N/A</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2015</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">N/A</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">Bulawayo</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Highlight</span>
+                            MSport package, 335i Active Hybrid, Leather bucket seats.
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;" onclick="sendWhatsApp('BMW F30')">Schedule
+                            Test Drive</button>
+                    </div>
+                </div>
+
+                <!-- Mercedes Benz C200 -->
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="merc-main-home" src="Cars/Mercedes Benz C200/Main Image.jpeg"
+                                alt="Mercedes Benz C200"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/Main Image.jpeg')"><img
+                                    src="Cars/Mercedes Benz C200/Main Image.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg')">
+                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg')">
+                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg')">
+                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span class="badge" style="background: #e0f2fe; color: #0369a1;">Clean Deal</span>
+                            <span style="font-weight: 700; color: var(--color-black);">$13,000</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mercedes Benz C200</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">100k km</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2012</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">N/A</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">Bulawayo</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Highlight</span>
+                            New tires all round, No Time wasters.
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('Mercedes Benz C200')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+                <!-- Toyota GD6 Legend 50 -->
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="gd6-main-home" src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"
+                                alt="Toyota GD6 Legend 50"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/main IMAGE.jpeg')"><img
+                                    src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg')">
+                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg')">
+                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg')">
+                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span class="badge" style="background: #fef3c7; color: #d97706;">Hot Deal</span>
+                            <span style="font-weight: 700; color: var(--color-black);">$48,000</span>
+                        </div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Toyota GD6 Legend 50</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">121k km</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2019</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">Auto</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">Bulawayo</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Highlight</span>
+                            Double cab, Negotiable/Swaps.
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('Toyota GD6 Legend 50')">Schedule Test Drive</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
+                        </div>
+                        ZYAMUTALA
+                    </a>
+                    <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
+                        Connecting buyers and sellers across Zimbabwe. <br>
+                        Trust, Transparency, and Results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i data-lucide="facebook" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="instagram" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="message-circle" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="market.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">+263 78 462 4431</a></li>
+                        <li><a href="#">info@zyamutala.co.zw</a></li>
+                        <li>Bulawayo, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zyamutala. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

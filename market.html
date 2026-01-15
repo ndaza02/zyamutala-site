@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Market | Zyamutala</title>
+    <meta name="description"
+        content="Browse our wide selection of verified used cars in Bulawayo. SUVs, Sedans, and Trucks available now.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .market-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .filters {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 1.5rem;
+            align-self: start;
+            position: sticky;
+            top: 100px;
+        }
+
+        .filter-group {
+            margin-bottom: 2rem;
+        }
+
+        .filter-group h5 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--color-mid-grey);
+            cursor: pointer;
+        }
+
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .market-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                display: none;
+                /* In a real app, stick in a drawer or accordion */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="car-front"></i></div>
+                ZYAMUTALA
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="market.html" class="active">Car Market</a>
+                <a href="sell.html">Sell Your Car</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="market.html" class="btn btn-primary mobile-only"
+                    style="margin-top: 1rem; text-align: center;">Browse Cars</a>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="market.html" class="btn btn-primary desktop-only"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Browse
+                    Cars</a>
+                <div class="mobile-toggle"><i data-lucide="menu"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="market-layout">
+            <!-- Sidebar Filters -->
+            <aside class="filters">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h3>Filters</h3>
+                    <span style="font-size: 0.8rem; text-decoration: underline; cursor: pointer;">Reset</span>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Condition</h5>
+                    <label class="checkbox-item"><input type="checkbox"> Recent Import</label>
+                    <label class="checkbox-item"><input type="checkbox"> Local Used</label>
+                    <label class="checkbox-item"><input type="checkbox"> Brand New</label>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Body Type</h5>
+                    <label class="checkbox-item"><input type="checkbox"> SUV</label>
+                    <label class="checkbox-item"><input type="checkbox"> Sedan</label>
+                    <label class="checkbox-item"><input type="checkbox"> Truck / Bakkie</label>
+                    <label class="checkbox-item"><input type="checkbox"> Hatchback</label>
+                </div>
+
+                <div class="filter-group">
+                    <h5>Price Range</h5>
+                    <input type="range" style="width: 100%;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 0.5rem;">
+                        <span>$2k</span>
+                        <span>$100k+</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2>Available Vehicles</h2>
+                    <select class="form-control" style="width: auto; padding: 0.5rem 1rem;">
+                        <option>Sort by: Newest</option>
+                        <option>Sort by: Price (Low to High)</option>
+                        <option>Sort by: Price (High to Low)</option>
+                    </select>
+                </div>
+
+                <div class="cars-grid">
+                    <!-- BMW F30 -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="bmw-main" src="Cars/BMW F30/main image.jpeg" alt="BMW F30"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('bmw-main', 'Cars/BMW F30/main image.jpeg')"><img
+                                        src="Cars/BMW F30/main image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('bmw-main', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg')">
+                                    <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('bmw-main', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg')">
+                                    <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('bmw-main', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg')">
+                                    <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">BMW F30</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$17,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2015</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                MSport package, 335i Active Hybrid, Leather bucket seats, Mags wheels.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('BMW F30')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Mercedes Benz C200 -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="merc-main" src="Cars/Mercedes Benz C200/Main Image.jpeg"
+                                    alt="Mercedes Benz C200"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('merc-main', 'Cars/Mercedes Benz C200/Main Image.jpeg')"><img
+                                        src="Cars/Mercedes Benz C200/Main Image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('merc-main', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg')">
+                                    <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('merc-main', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg')">
+                                    <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('merc-main', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg')">
+                                    <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mercedes Benz C200</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$13,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">100,000 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2012</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                New tires all round, No Time wasters.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Mercedes Benz C200')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Toyota GD6 Legend 50 -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="gd6-main" src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"
+                                    alt="Toyota GD6 Legend 50"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('gd6-main', 'Cars/Toyota GD6 Legend 50/main IMAGE.jpeg')"><img
+                                        src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('gd6-main', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg')">
+                                    <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('gd6-main', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg')">
+                                    <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('gd6-main', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg')">
+                                    <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Toyota GD6 Legend 50</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$48,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">121,000 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2019</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">Automatic</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">South African</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                Double cab, Negotiable/Swaps.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Toyota GD6 Legend 50')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Mazda 6 Sport -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="mazda-main" src="Cars/Mazda 6 Sport/Main Image.jpeg" alt="Mazda 6 Sport"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda-main', 'Cars/Mazda 6 Sport/Main Image.jpeg')"><img
+                                        src="Cars/Mazda 6 Sport/Main Image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda-main', 'Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.17.jpeg')">
+                                    <img src="Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.17.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda-main', 'Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.18.jpeg')">
+                                    <img src="Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.18.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda-main', 'Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.19.jpeg')">
+                                    <img src="Cars/Mazda 6 Sport/WhatsApp Image 2025-12-29 at 12.40.19.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mazda 6 Sport</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$17,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">64,000 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2017</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">Recent Import</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                Full spec, Perfect condition.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Mazda 6 Sport')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Nissan Atlas -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="nissan-main" src="Cars/Nissan Atlas/Main Image.jpeg" alt="Nissan Atlas"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('nissan-main', 'Cars/Nissan Atlas/Main Image.jpeg')"><img
+                                        src="Cars/Nissan Atlas/Main Image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('nissan-main', 'Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.51.jpeg')">
+                                    <img src="Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.51.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('nissan-main', 'Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.52.jpeg')">
+                                    <img src="Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.52.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('nissan-main', 'Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.53.jpeg')">
+                                    <img src="Cars/Nissan Atlas/WhatsApp Image 2025-12-29 at 12.44.53.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Nissan Atlas</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$15,500</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2017</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">Recent Import</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                Petrol Engine.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Nissan Atlas')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Toyota Baby Quantum -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="quantum-main" src="Cars/Toyota Baby Quantum/Main Image.jpeg"
+                                    alt="Toyota Baby Quantum"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('quantum-main', 'Cars/Toyota Baby Quantum/Main Image.jpeg')">
+                                    <img src="Cars/Toyota Baby Quantum/Main Image.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('quantum-main', 'Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.09.jpeg')">
+                                    <img src="Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.09.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('quantum-main', 'Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.10.jpeg')">
+                                    <img src="Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.10.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('quantum-main', 'Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.11.jpeg')">
+                                    <img src="Cars/Toyota Baby Quantum/WhatsApp Image 2025-12-29 at 12.39.11.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Toyota Baby Quantum</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$22,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">93,000 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">Automatic</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                1KD engine, Low mileage.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Toyota Baby Quantum')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+                    <!-- Isuzu KB300 -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="isuzu-main" src="Cars/Isuzu KB300/Main image.jpeg" alt="Isuzu KB300"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('isuzu-main', 'Cars/Isuzu KB300/Main image.jpeg')"><img
+                                        src="Cars/Isuzu KB300/Main image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('isuzu-main', 'Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.10.jpeg')">
+                                    <img src="Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.10.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('isuzu-main', 'Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.13.jpeg')">
+                                    <img src="Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.13.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('isuzu-main', 'Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.16.jpeg')">
+                                    <img src="Cars/Isuzu KB300/WhatsApp Image 2026-01-07 at 16.37.16.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Isuzu KB300</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$9,800</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">Manual</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                South African make, One owner since new, Negotiable.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Isuzu KB300')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Mazda 3 Sedan -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="mazda3-main" src="Cars/Mazda 3 Sedan/Main Image.jpeg" alt="Mazda 3 Sedan"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda3-main', 'Cars/Mazda 3 Sedan/Main Image.jpeg')"><img
+                                        src="Cars/Mazda 3 Sedan/Main Image.jpeg"></div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda3-main', 'Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.48.50.jpeg')">
+                                    <img src="Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.48.50.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda3-main', 'Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.49.08.jpeg')">
+                                    <img src="Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.49.08.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('mazda3-main', 'Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.49.10.jpeg')">
+                                    <img src="Cars/Mazda 3 Sedan/WhatsApp Image 2026-01-07 at 16.49.10.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mazda 3 Sedan</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$5,800</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">129,000 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2004</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">Manual</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                Clean in N out, Reduced to go.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Mazda 3 Sedan')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Mazda Premacy 7 Seater -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="premacy-main" src="Cars/Mazda Premacy 7 Seater/Main Image.jpeg"
+                                    alt="Mazda Premacy"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('premacy-main', 'Cars/Mazda Premacy 7 Seater/Main Image.jpeg')">
+                                    <img src="Cars/Mazda Premacy 7 Seater/Main Image.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('premacy-main', 'Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.45.jpeg')">
+                                    <img src="Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.45.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('premacy-main', 'Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.46.jpeg')">
+                                    <img src="Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.46.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('premacy-main', 'Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.47.jpeg')">
+                                    <img src="Cars/Mazda Premacy 7 Seater/WhatsApp Image 2026-01-07 at 16.50.47.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mazda Premacy 7 Seater</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$3,600</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">151,743 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">N/A</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">Up-to-date</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                2L Petrol Engine & Gearbox solid, Clean in and out.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Mazda Premacy 7 Seater')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                    <!-- Toyota Club Cab GD6 -->
+                    <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+                        <div style="padding: 1rem 1rem 0;">
+                            <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                                <img id="clubcab-main" src="Cars/Toyota Club Cab GD6/Main Image.jpeg"
+                                    alt="Toyota Club Cab GD6"
+                                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            </div>
+                            <div class="thumb-grid">
+                                <div class="thumb-img"
+                                    onclick="changeImage('clubcab-main', 'Cars/Toyota Club Cab GD6/Main Image.jpeg')">
+                                    <img src="Cars/Toyota Club Cab GD6/Main Image.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('clubcab-main', 'Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.04.jpeg')">
+                                    <img src="Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.04.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('clubcab-main', 'Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.05.jpeg')">
+                                    <img src="Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.05.jpeg">
+                                </div>
+                                <div class="thumb-img"
+                                    onclick="changeImage('clubcab-main', 'Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.06.jpeg')">
+                                    <img src="Cars/Toyota Club Cab GD6/WhatsApp Image 2026-01-07 at 16.45.06.jpeg">
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Toyota Club Cab GD6</h4>
+
+                            <div class="car-details-grid">
+                                <div class="detail-item"><span class="detail-label">Price</span><span
+                                        class="detail-value">$38,000</span></div>
+                                <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                        class="detail-value">102,759 km</span></div>
+                                <div class="detail-item"><span class="detail-label">Year</span><span
+                                        class="detail-value">2018</span></div>
+                                <div class="detail-item"><span class="detail-label">Trans</span><span
+                                        class="detail-value">Manual</span></div>
+                                <div class="detail-item"><span class="detail-label">Zinara</span><span
+                                        class="detail-value">Recent Import</span></div>
+                                <div class="detail-item"><span class="detail-label">Location</span><span
+                                        class="detail-value">Bulawayo CBD</span></div>
+                            </div>
+
+                            <div class="car-note">
+                                <span>Note</span>
+                                Recent import, Duty paid, Manual transmission.
+                            </div>
+
+                            <button class="btn btn-outline" style="width: 100%;"
+                                onclick="sendWhatsApp('Toyota Club Cab GD6')">Schedule Test Drive</button>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
+                        </div>
+                        ZYAMUTALA
+                    </a>
+                    <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
+                        Connecting buyers and sellers across Zimbabwe. <br>
+                        Trust, Transparency, and Results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i data-lucide="facebook" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="instagram" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="message-circle" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="market.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">+263 78 462 4431</a></li>
+                        <li><a href="#">info@zyamutala.co.zw</a></li>
+                        <li>Bulawayo, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zyamutala. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
