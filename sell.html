@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car | Zyamutala</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .page-header {
+            background-color: var(--color-black);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .calculator-box {
+            background: var(--color-light-grey);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+            margin-top: 1rem;
+        }
+
+        .big-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="car-front"></i></div>
+                ZYAMUTALA
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="market.html">Car Market</a>
+                <a href="sell.html" class="active">Sell Your Car</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="market.html" class="btn btn-primary mobile-only"
+                    style="margin-top: 1rem; text-align: center;">Browse Cars</a>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="market.html" class="btn btn-primary desktop-only"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Browse
+                    Cars</a>
+                <div class="mobile-toggle"><i data-lucide="menu"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sell Page Hero -->
+    <div class="hero"
+        style="height: 50vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('Hero Images/Hero 1.jpg'); display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <h1 class="reveal-on-scroll" style="font-size: 3.5rem; margin-bottom: 1rem; color: #ffffff;">Sell with
+                Zyamutala</h1>
+            <p class="text-white reveal-on-scroll"
+                style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; color: #ffffff;">
+                Get the best value for your vehicle. We handle the negotiations, marketing, and paperwork for a flat 5%
+                commission.
+            </p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+
+            <!-- Calculator -->
+            <div class="calculator-box reveal-on-scroll">
+                <h2>Commission Calculator</h2>
+                <p class="text-grey" style="margin-bottom: 2rem;">Enter your asking price to see our fee and your
+                    estimated payout.</p>
+
+                <div class="input-group">
+                    <label>Asking Price (USD)</label>
+                    <input type="number" id="asking-price" class="form-control" placeholder="e.g. 15000">
+                </div>
+
+                <div class="result-row">
+                    <span>Zyamutala Commission (5%)</span>
+                    <span class="big-number" id="commission-result">$0.00</span>
+                </div>
+                <div class="result-row">
+                    <span>Your Estimated Payout</span>
+                    <span class="big-number" style="color: var(--color-black);" id="net-result">$0.00</span>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div style="max-width: 800px; margin: 4rem auto 0;" class="reveal-on-scroll">
+                <h3 style="margin-bottom: 2rem;">Submit Your Vehicle</h3>
+                <form onsubmit="event.preventDefault(); alert('Submission received! Example only.');"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <label>Vehicle Title (Year, Make, Model)</label>
+                        <input type="text" class="form-control" placeholder="e.g. 2020 Toyota Fortuner">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Mileage (km)</label>
+                        <input type="number" class="form-control" placeholder="e.g. 85000">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Transmission</label>
+                        <select class="form-control">
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                            <option>CVT</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Price (USD)</label>
+                        <input type="number" class="form-control" placeholder="Asking Price">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Condition</label>
+                        <select class="form-control">
+                            <option>Excellent</option>
+                            <option>Good</option>
+                            <option>Fair</option>
+                            <option>Needs Work</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <label>Additional Notes</label>
+                        <textarea class="form-control" rows="4"
+                            placeholder="Any special features, recent service history, or negotiation terms..."></textarea>
+                    </div>
+
+                    <div class="input-group" style="grid-column: 1 / -1;">
+                        <label>Upload Photos (Exterior & Interior)</label>
+                        <div
+                            style="border: 2px dashed #ccc; padding: 2rem; border-radius: 12px; text-align: center; cursor: pointer;">
+                            <i data-lucide="upload-cloud" style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
+                            <p>Click to upload or drag and drop</p>
+                            <p class="text-grey" style="font-size: 0.8rem;">Max 10 images. JPG, PNG.</p>
+                        </div>
+                    </div>
+
+                    <div style="grid-column: 1 / -1;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit for Review</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
+                        </div>
+                        ZYAMUTALA
+                    </a>
+                    <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
+                        Connecting buyers and sellers across Zimbabwe. <br>
+                        Trust, Transparency, and Results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i data-lucide="facebook" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="instagram" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="message-circle" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="market.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">+263 78 462 4431</a></li>
+                        <li><a href="#">info@zyamutala.co.zw</a></li>
+                        <li>Bulawayo, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zyamutala. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

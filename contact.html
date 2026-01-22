@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Zyamutala</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-light-grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-black);
+            flex-shrink: 0;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-metallic);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i data-lucide="car-front"></i></div>
+                ZYAMUTALA
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="market.html">Car Market</a>
+                <a href="sell.html">Sell Your Car</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="market.html" class="btn btn-primary mobile-only"
+                    style="margin-top: 1rem; text-align: center;">Browse Cars</a>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="market.html" class="btn btn-primary desktop-only"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Browse
+                    Cars</a>
+                <div class="mobile-toggle"><i data-lucide="menu"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <div class="hero"
+        style="height: 50vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('Hero Images/Hero 3.jpg'); display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <span class="badge"
+                style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 1rem; display: inline-block;">Support</span>
+            <h1 class="reveal-on-scroll" style="font-size: 3.5rem; margin-bottom: 1rem; color: #ffffff;">Get in Touch
+            </h1>
+            <p class="text-white reveal-on-scroll"
+                style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; color: #ffffff;">
+                Ready to find your dream car or sell your current one? We are here to answer any questions you have.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Grid Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info Side -->
+                <div class="reveal-on-scroll">
+                    <h2 style="margin-bottom: 1rem;">Contact Information</h2>
+                    <p class="text-grey" style="margin-bottom: 3rem; font-size: 1.1rem;">
+                        Reach out to our team via phone, email, or visit our office in Bulawayo. We value open
+                        communication.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="contact-info-item"
+                            style="padding: 1.5rem; background: var(--color-light-grey); border-radius: 16px; align-items: center; margin-bottom: 0;">
+                            <div class="contact-icon" style="background: white;"><i data-lucide="phone"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Phone</h4>
+                                <p class="text-grey" style="font-size: 0.95rem;">+263 78 462 4431</p>
+                                <p class="text-grey" style="font-size: 0.95rem;">+263 71 987 6543</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item"
+                            style="padding: 1.5rem; background: var(--color-light-grey); border-radius: 16px; align-items: center; margin-bottom: 0;">
+                            <div class="contact-icon" style="background: white;"><i data-lucide="mail"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Email</h4>
+                                <p class="text-grey" style="font-size: 0.95rem;">info@zyamutala.co.zw</p>
+                                <p class="text-grey" style="font-size: 0.95rem;">sales@zyamutala.co.zw</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item"
+                            style="padding: 1.5rem; background: var(--color-light-grey); border-radius: 16px; align-items: center; margin-bottom: 0;">
+                            <div class="contact-icon" style="background: white;"><i data-lucide="map-pin"></i></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">Office</h4>
+                                <p class="text-grey" style="font-size: 0.95rem;">123 Main Street, Bulawayo, Zimbabwe</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Scale Placeholder -->
+                    <div
+                        style="margin-top: 2rem; border-radius: 16px; overflow: hidden; height: 250px; background: #eee; position: relative;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.02989506722!2d28.50868848419189!3d-20.149258900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb5536074213d29%3A0xc66576b9f1d06151!2sBulawayo%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1645487890123!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="reveal-on-scroll"
+                    style="background: white; padding: 3rem; border-radius: 24px; border: 1px solid #eee; box-shadow: var(--shadow-lg);">
+                    <h3 style="margin-bottom: 0.5rem;">Send us a Message</h3>
+                    <p class="text-grey" style="margin-bottom: 2rem;">Fill out the form below and we'll get back to you
+                        within 24 hours.</p>
+
+                    <form style="display: grid; gap: 1.25rem;"
+                        onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">First
+                                    Name</label>
+                                <input type="text" class="form-control" placeholder="John"
+                                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+                            </div>
+                            <div>
+                                <label
+                                    style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Last
+                                    Name</label>
+                                <input type="text" class="form-control" placeholder="Doe"
+                                    style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Email
+                                Address</label>
+                            <input type="email" class="form-control" placeholder="john@example.com"
+                                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Subject</label>
+                            <select class="form-control"
+                                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; background: white;">
+                                <option>General Inquiry</option>
+                                <option>Buying a Car</option>
+                                <option>Selling a Car</option>
+                                <option>Partnership</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem;">Message</label>
+                            <textarea class="form-control" rows="5" placeholder="How can we help?"
+                                style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="flex: 2;">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
+                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
+                        </div>
+                        ZYAMUTALA
+                    </a>
+                    <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
+                        Connecting buyers and sellers across Zimbabwe. <br>
+                        Trust, Transparency, and Results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i data-lucide="facebook" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="instagram" style="width: 18px;"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="message-circle" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="market.html">Buy a Car</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">+263 78 462 4431</a></li>
+                        <li><a href="#">info@zyamutala.co.zw</a></li>
+                        <li>Bulawayo, Zimbabwe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zyamutala. All Rights Reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
