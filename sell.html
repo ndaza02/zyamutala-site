@@ -10,40 +10,18 @@
 
     <!-- Advanced SEO -->
     <link rel="canonical" href="https://zyamutala.co.zw/sell.html">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://zyamutala.co.zw/sell.html">
     <meta property="og:title" content="Sell Your Car | Zyamutala">
     <meta property="og:description"
-        content="Get the best value for your vehicle. We handle negotiations, marketing, and paperwork for a flat 5% commission.">
-    <meta property="og:image" content="https://zyamutala.co.zw/Hero%20Images/Hero%201.jpg">
+        content="Sell your car quickly and safely with Zyamutala's flat 5% commission. Get a free valuation today.">
+    <meta property="og:image" content="https://zyamutala.co.zw/Hero%20Images/Hero%203.jpg">
+    <meta property="og:url" content="https://zyamutala.co.zw/sell.html">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Sell Your Car | Zyamutala">
-    <meta property="twitter:description" content="Get the best value for your vehicle. Flat 5% commission.">
-    <meta property="twitter:image" content="https://zyamutala.co.zw/Hero%20Images/Hero%201.jpg">
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://zyamutala.co.zw/index.html"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Sell",
-        "item": "https://zyamutala.co.zw/sell.html"
-      }]
-    }
-    </script>
-
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -169,7 +147,7 @@
             <!-- Form -->
             <div style="max-width: 800px; margin: 4rem auto 0;" class="reveal-on-scroll">
                 <h3 style="margin-bottom: 2rem;">Submit Your Vehicle</h3>
-                <form action="mailto:info@zyamutala.co.zw" method="post" enctype="text/plain"
+                <form onsubmit="event.preventDefault(); alert('Submission received! Example only.');"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
 
                     <div class="input-group" style="grid-column: 1 / -1;">
@@ -272,8 +250,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 Zyamutala. All Rights Reserved.</p>
                 <div style="display: flex; gap: 1.5rem;">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
