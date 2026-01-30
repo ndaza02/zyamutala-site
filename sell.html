@@ -130,57 +130,60 @@
             <!-- Form -->
             <div style="max-width: 800px; margin: 4rem auto 0;" class="reveal-on-scroll">
                 <h3 style="margin-bottom: 2rem;">Submit Your Vehicle</h3>
-                <form onsubmit="event.preventDefault(); alert('Submission received! Example only.');"
+                <form action="https://formsubmit.co/info@zyamutala.co.zw" method="POST" enctype="multipart/form-data"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Sell Your Car Submission">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://zyamutala.co.zw/sell.html">
 
                     <div class="input-group" style="grid-column: 1 / -1;">
                         <label>Vehicle Title (Year, Make, Model)</label>
-                        <input type="text" class="form-control" placeholder="e.g. 2020 Toyota Fortuner">
+                        <input type="text" name="vehicle_title" class="form-control"
+                            placeholder="e.g. 2020 Toyota Fortuner" required>
                     </div>
 
                     <div class="input-group">
                         <label>Mileage (km)</label>
-                        <input type="number" class="form-control" placeholder="e.g. 85000">
+                        <input type="number" name="mileage" class="form-control" placeholder="e.g. 85000" required>
                     </div>
 
                     <div class="input-group">
                         <label>Transmission</label>
-                        <select class="form-control">
-                            <option>Automatic</option>
-                            <option>Manual</option>
-                            <option>CVT</option>
+                        <select name="transmission" class="form-control">
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                            <option value="CVT">CVT</option>
                         </select>
                     </div>
 
                     <div class="input-group">
                         <label>Price (USD)</label>
-                        <input type="number" class="form-control" placeholder="Asking Price">
+                        <input type="number" name="price" class="form-control" placeholder="Asking Price" required>
                     </div>
 
                     <div class="input-group">
                         <label>Condition</label>
-                        <select class="form-control">
-                            <option>Excellent</option>
-                            <option>Good</option>
-                            <option>Fair</option>
-                            <option>Needs Work</option>
+                        <select name="condition" class="form-control">
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Needs Work">Needs Work</option>
                         </select>
                     </div>
 
                     <div class="input-group" style="grid-column: 1 / -1;">
                         <label>Additional Notes</label>
-                        <textarea class="form-control" rows="4"
+                        <textarea name="notes" class="form-control" rows="4"
                             placeholder="Any special features, recent service history, or negotiation terms..."></textarea>
                     </div>
 
                     <div class="input-group" style="grid-column: 1 / -1;">
                         <label>Upload Photos (Exterior & Interior)</label>
-                        <div
-                            style="border: 2px dashed #ccc; padding: 2rem; border-radius: 12px; text-align: center; cursor: pointer;">
-                            <i data-lucide="upload-cloud" style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
-                            <p>Click to upload or drag and drop</p>
-                            <p class="text-grey" style="font-size: 0.8rem;">Max 10 images. JPG, PNG.</p>
-                        </div>
+                        <input type="file" name="photos" class="form-control" multiple accept="image/*"
+                            style="padding: 1rem;">
                     </div>
 
                     <div style="grid-column: 1 / -1;">

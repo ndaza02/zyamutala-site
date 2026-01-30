@@ -158,6 +158,31 @@ h3 {
     letter-spacing: 0.05em;
 }
 
+/* Sold Badge */
+.sold-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ef4444; /* Red */
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn.disabled {
+    background-color: #d1d5db; /* Grey */
+    border-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
 /* --- Modules --- */
 
 /* Header */
@@ -553,6 +578,8 @@ footer {
     height: 100%;
     background: white;
     /* Ensure bg is white for the card */
+    position: relative;
+
 }
 
 /* Target the content container (2nd child) */
