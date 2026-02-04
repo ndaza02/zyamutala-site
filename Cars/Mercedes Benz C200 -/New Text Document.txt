@@ -1,0 +1,10 @@
+Name: MERCEDES BENZ C200
+Year: 2012
+Type: SEDAN
+Price: $13000
+Mileage: 100000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: NEW TIRES ALL ROUND 

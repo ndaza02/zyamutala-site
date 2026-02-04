@@ -1,0 +1,10 @@
+Name: HONDA SHUTTLE
+Year: 2017
+Type: STATION WAGON
+Price: $13000
+Mileage: 80546KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: SOLD
+Read More: Recent import, duty paid

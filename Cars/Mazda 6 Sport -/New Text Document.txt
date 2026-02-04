@@ -1,0 +1,10 @@
+Name: MAZDA 6 SPORT 2017
+Year: 2017
+Type: SEDAN
+Price: $17000
+Mileage: 64000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Perfect Condition

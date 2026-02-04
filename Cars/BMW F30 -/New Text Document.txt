@@ -1,0 +1,11 @@
+Name: BMW F30
+Year: 2015
+Type: SEDAN
+Price: $17000
+Mileage: 89546KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Status: AVAILABLE
+Location:BULAWAYO
+Read More: MSport package, 335i Active Hybrid, Leather bucket seats, Mags wheels
+

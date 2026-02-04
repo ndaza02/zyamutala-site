@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('header');
             header.classList.toggle('nav-open');
 
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = header.classList.contains('nav-open') ? 'hidden' : 'auto';
+
             // Optional: Toggle icon (menu <-> x)
             const icon = mobileToggle.querySelector('i');
             if (header.classList.contains('nav-open')) {
@@ -18,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
         });
     }
+
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.desktop-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            const header = document.querySelector('header');
+            if (header.classList.contains('nav-open')) {
+                header.classList.remove('nav-open');
+                document.body.style.overflow = 'auto';
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    if (window.lucide) lucide.createIcons();
+                }
+            }
+        });
+    });
 
     // Scroll Animations
     const observerOptions = {
@@ -83,8 +103,24 @@ function changeImage(mainImageId, newSrc) {
 }
 
 // WhatsApp Integration
-function sendWhatsApp(carName) {
+function sendWhatsApp(carName, year) {
     const phoneNumber = "263784624431";
-    const text = encodeURIComponent(`Hi Zyamutala, I am interested in scheduling a test drive for the ${carName}. Is it still available?`);
+    const yearText = year ? ` (${year})` : "";
+    const text = encodeURIComponent(`Hi Zyamutala, I am interested in scheduling a test drive for the ${carName}${yearText}. Is it still available?`);
     window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
+}
+
+// FAQ Logic
+function toggleFaq(element) {
+    const isActive = element.classList.contains('active');
+
+    // Close all other FAQs
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // Toggle clicked FAQ
+    if (!isActive) {
+        element.classList.add('active');
+    }
 }

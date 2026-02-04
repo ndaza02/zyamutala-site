@@ -1,0 +1,10 @@
+Name: HONDA VEZEL
+Year: 2016
+Type: SUV
+Price: $17000
+Mileage: 96403KM
+Transmission: AUTOMATIC 
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Duty Paid

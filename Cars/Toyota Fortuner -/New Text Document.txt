@@ -1,0 +1,10 @@
+Name: TOYOTA FORTUNER
+Year: 2015
+Type: SUV
+Price: $28000
+Mileage: 193794KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Clean

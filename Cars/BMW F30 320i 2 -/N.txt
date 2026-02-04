@@ -1,0 +1,10 @@
+Name: BMW F30 320i
+Year: 2015
+Type: SEDAN
+Price: $13000
+Mileage: 101419KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Mint condition, new tryes, solid suspension, black soft leather interior, steering controls, mags

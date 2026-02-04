@@ -8,51 +8,17 @@
     <meta name="description"
         content="Zyamutala - The premier car broker in Bulawayo, Zimbabwe. Connecting buyers and sellers with trust, transparency, and speed.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Social Sharing Meta Tags -->
+    <meta property="og:title" content="Zyamutala | Premium Car Broker Bulawayo">
+    <meta property="og:description" content="Bulawayo's #1 Trusted Car Broker. Buy with confidence, sell with speed.">
+    <meta property="og:image" content="assets/preview.jpg">
+    <meta property="og:url" content="https://zyamutala.co.zw">
+    <meta property="og:type" content="website">
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Home Specific Styles */
-        .hero {
-            height: 90vh;
-            min-height: 600px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('Hero Images/Hero 1.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: var(--color-light-grey);
-            padding: 2.5rem;
-            border-radius: 20px;
-            transition: var(--transition-smooth);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            background: var(--color-white);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--color-black);
-            color: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
     </style>
 </head>
 
@@ -62,8 +28,7 @@
     <header>
         <div class="container nav-content">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i data-lucide="car-front"></i></div>
-                ZYAMUTALA
+                <img src="assets/logo.png" alt="Zyamutala Logo" style="height: 45px; width: auto;">
             </a>
             <nav class="desktop-nav">
                 <a href="index.html" class="active">Home</a>
@@ -85,32 +50,48 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div style="max-width: 800px;" class="reveal-on-scroll">
-                <div class="badge"
-                    style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 1.5rem; display: inline-block; backdrop-filter: blur(5px);">
+        <div class="container hero-content">
+            <div class="reveal-on-scroll hero-text-box">
+                <div class="badge hero-badge">
                     Bulawayo's #1 Trusted Car Broker
                 </div>
-                <h1 style="margin-bottom: 1.5rem; font-size: 4rem; color: #ffffff;">Buy with Confidence. <br> Sell with
-                    Speed.</h1>
-                <p style="font-size: 1.25rem; margin-bottom: 2.5rem; color: #ffffff; max-width: 600px;">
-                    Stop gambling with your money. We verify every vehicle, negotiate the best deals, and handle all the
-                    paperwork.
+                <h1 class="hero-title">Buy with Confidence. <br> Sell with Speed.</h1>
+                <p class="hero-subtitle">
+                    Verify every vehicle, negotiate the best deals, and handle all the paperwork.
                     The safe way to buy and sell cars in Zimbabwe.
                 </p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <a href="market.html" class="btn btn-white-outline"
-                        style="background: white; color: black; border-color: white; padding: 1rem 2.5rem;">Browse
-                        Inventory</a>
-                    <a href="sell.html" class="btn btn-white-outline" style="padding: 1rem 2.5rem;">Sell My Car</a>
+                <div class="hero-btns">
+                    <a href="market.html" class="btn btn-white-outline primary-btn">Browse Inventory</a>
+                    <a href="sell.html" class="btn btn-white-outline">Sell My Car</a>
                 </div>
-                <div style="margin-top: 3rem; display: flex; gap: 2rem; color: #ffffff; font-size: 0.9rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
-                            style="width: 18px;"></i> Verified Sellers</div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
-                            style="width: 18px;"></i> Secure Transactions</div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="check-circle"
-                            style="width: 18px;"></i> 5% Flat Commission</div>
+                <div class="hero-features desktop-only">
+                    <div class="feature-item"><i data-lucide="check-circle"></i> Verified Sellers</div>
+                    <div class="feature-item"><i data-lucide="check-circle"></i> Secure Transactions</div>
+                    <div class="feature-item"><i data-lucide="check-circle"></i> 5% Flat Commission</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="stats-grid reveal-on-scroll">
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>Cars Sold</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5 Years</h3>
+                    <p>Of Trust</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Support</p>
                 </div>
             </div>
         </div>
@@ -161,180 +142,607 @@
 
             <!-- Simple Grid for Featured Items -->
             <!-- Simple Grid for Featured Items -->
-            <div class="services-grid">
-                <!-- BMW F30 -->
-                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+            <div class="featured-grid">
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="SEDAN"
+                    data-fuel="Hybrid" data-trans="AUTOMATIC" data-price="17000">
+
                     <div style="padding: 1rem 1rem 0;">
                         <div style="height: 250px; overflow: hidden; border-radius: 12px;">
-                            <img id="bmw-main-home" src="Cars/BMW F30/main image.jpeg" alt="BMW F30"
-                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            <img id="home-car-0-main" src="Cars/BMW F30 -/main image.jpeg" alt="BMW F30"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
                         </div>
                         <div class="thumb-grid">
                             <div class="thumb-img"
-                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/main image.jpeg')"><img
-                                    src="Cars/BMW F30/main image.jpeg"></div>
+                                onclick="changeImage('home-car-0-main', 'Cars/BMW F30 -/main image.jpeg')"><img
+                                    src="Cars/BMW F30 -/main image.jpeg"></div>
                             <div class="thumb-img"
-                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg')">
-                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.06.jpeg">
+                                onclick="changeImage('home-car-0-main', 'Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06 (1).jpeg')">
+                                <img src="Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06 (1).jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg')">
-                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.07.jpeg">
+                                onclick="changeImage('home-car-0-main', 'Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06 (2).jpeg')">
+                                <img src="Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06 (2).jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('bmw-main-home', 'Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg')">
-                                <img src="Cars/BMW F30/WhatsApp Image 2025-12-29 at 12.42.08.jpeg">
+                                onclick="changeImage('home-car-0-main', 'Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06.jpeg')">
+                                <img src="Cars/BMW F30 -/WhatsApp Image 2025-12-29 at 12.42.06.jpeg">
                             </div>
                         </div>
                     </div>
                     <div style="padding: 1.5rem;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge">Featured</span>
-                            <span style="font-weight: 700; color: var(--color-black);">$17,000</span>
-                        </div>
                         <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">BMW F30</h4>
 
                         <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$17000</span></div>
                             <div class="detail-item"><span class="detail-label">Mileage</span><span
-                                    class="detail-value">N/A</span></div>
+                                    class="detail-value">89546KM</span></div>
                             <div class="detail-item"><span class="detail-label">Year</span><span
                                     class="detail-value">2015</span></div>
                             <div class="detail-item"><span class="detail-label">Trans</span><span
-                                    class="detail-value">N/A</span></div>
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">SEDAN</span></div>
                             <div class="detail-item"><span class="detail-label">Location</span><span
-                                    class="detail-value">Bulawayo</span></div>
+                                    class="detail-value">BULAWAYO</span></div>
                         </div>
 
                         <div class="car-note">
-                            <span>Highlight</span>
-                            MSport package, 335i Active Hybrid, Leather bucket seats.
+                            <span>Note</span>
+                            MSport package, 335i Active Hybrid, Leather bucket seats, Mags wheels
                         </div>
 
-                        <button class="btn btn-outline" style="width: 100%;" onclick="sendWhatsApp('BMW F30')">Schedule
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('BMW F30', '2015')">Schedule
                             Test Drive</button>
                     </div>
                 </div>
 
-                <!-- Mercedes Benz C200 -->
-                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="SEDAN"
+                    data-fuel="Petrol" data-trans="AUTOMATIC" data-price="13000">
+
                     <div style="padding: 1rem 1rem 0;">
                         <div style="height: 250px; overflow: hidden; border-radius: 12px;">
-                            <img id="merc-main-home" src="Cars/Mercedes Benz C200/Main Image.jpeg"
-                                alt="Mercedes Benz C200"
-                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            <img id="home-car-1-main" src="Cars/BMW F30 320i 2 -/Main Image.jpeg" alt="BMW F30 320i"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
                         </div>
                         <div class="thumb-grid">
                             <div class="thumb-img"
-                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/Main Image.jpeg')"><img
-                                    src="Cars/Mercedes Benz C200/Main Image.jpeg"></div>
+                                onclick="changeImage('home-car-1-main', 'Cars/BMW F30 320i 2 -/Main Image.jpeg')"><img
+                                    src="Cars/BMW F30 320i 2 -/Main Image.jpeg"></div>
                             <div class="thumb-img"
-                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg')">
-                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.56.19.jpeg">
+                                onclick="changeImage('home-car-1-main', 'Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.41 (1).jpeg')">
+                                <img src="Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.41 (1).jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg')">
-                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.28.jpeg">
+                                onclick="changeImage('home-car-1-main', 'Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.41.jpeg')">
+                                <img src="Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.41.jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('merc-main-home', 'Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg')">
-                                <img src="Cars/Mercedes Benz C200/WhatsApp Image 2025-12-29 at 12.59.30.jpeg">
+                                onclick="changeImage('home-car-1-main', 'Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.42 (1).jpeg')">
+                                <img src="Cars/BMW F30 320i 2 -/WhatsApp Image 2026-01-26 at 15.13.42 (1).jpeg">
                             </div>
                         </div>
                     </div>
                     <div style="padding: 1.5rem;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge" style="background: #e0f2fe; color: #0369a1;">Clean Deal</span>
-                            <span style="font-weight: 700; color: var(--color-black);">$13,000</span>
-                        </div>
-                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Mercedes Benz C200</h4>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">BMW F30 320i</h4>
 
                         <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$13000</span></div>
                             <div class="detail-item"><span class="detail-label">Mileage</span><span
-                                    class="detail-value">100k km</span></div>
+                                    class="detail-value">101419KM</span></div>
                             <div class="detail-item"><span class="detail-label">Year</span><span
-                                    class="detail-value">2012</span></div>
+                                    class="detail-value">2015</span></div>
                             <div class="detail-item"><span class="detail-label">Trans</span><span
-                                    class="detail-value">N/A</span></div>
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">SEDAN</span></div>
                             <div class="detail-item"><span class="detail-label">Location</span><span
-                                    class="detail-value">Bulawayo</span></div>
+                                    class="detail-value">BULAWAYO</span></div>
                         </div>
 
                         <div class="car-note">
-                            <span>Highlight</span>
-                            New tires all round, No Time wasters.
+                            <span>Note</span>
+                            Mint condition, new tryes, solid suspension, black soft leather interior, steering controls,
+                            mags
                         </div>
 
                         <button class="btn btn-outline" style="width: 100%;"
-                            onclick="sendWhatsApp('Mercedes Benz C200')">Schedule Test Drive</button>
+                            onclick="sendWhatsApp('BMW F30 320i', '2015')">Schedule Test Drive</button>
                     </div>
                 </div>
 
-                <!-- Toyota GD6 Legend 50 -->
-                <div class="service-card" style="padding: 0; overflow: hidden; background: white;">
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="HATCHBACK"
+                    data-fuel="Hybrid" data-trans="AUTOMATIC" data-price="10800">
+
                     <div style="padding: 1rem 1rem 0;">
                         <div style="height: 250px; overflow: hidden; border-radius: 12px;">
-                            <img id="gd6-main-home" src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"
-                                alt="Toyota GD6 Legend 50"
-                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s;">
+                            <img id="home-car-2-main" src="Cars/Honda Fit GP5 Hybrid -/Main image.jpeg"
+                                alt="HONDA FIT GP5 HYBRID"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
                         </div>
                         <div class="thumb-grid">
                             <div class="thumb-img"
-                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/main IMAGE.jpeg')"><img
-                                    src="Cars/Toyota GD6 Legend 50/main IMAGE.jpeg"></div>
-                            <div class="thumb-img"
-                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg')">
-                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24.jpeg">
+                                onclick="changeImage('home-car-2-main', 'Cars/Honda Fit GP5 Hybrid -/Main image.jpeg')">
+                                <img src="Cars/Honda Fit GP5 Hybrid -/Main image.jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg')">
-                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.25.jpeg">
+                                onclick="changeImage('home-car-2-main', 'Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.33 (1).jpeg')">
+                                <img src="Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.33 (1).jpeg">
                             </div>
                             <div class="thumb-img"
-                                onclick="changeImage('gd6-main-home', 'Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg')">
-                                <img src="Cars/Toyota GD6 Legend 50/WhatsApp Image 2025-12-29 at 12.58.24 (2).jpeg">
+                                onclick="changeImage('home-car-2-main', 'Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.33.jpeg')">
+                                <img src="Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.33.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-2-main', 'Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.34 (1).jpeg')">
+                                <img src="Cars/Honda Fit GP5 Hybrid -/WhatsApp Image 2026-01-28 at 01.38.34 (1).jpeg">
                             </div>
                         </div>
                     </div>
                     <div style="padding: 1.5rem;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span class="badge" style="background: #fef3c7; color: #d97706;">Hot Deal</span>
-                            <span style="font-weight: 700; color: var(--color-black);">$48,000</span>
-                        </div>
-                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Toyota GD6 Legend 50</h4>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">HONDA FIT GP5 HYBRID</h4>
 
                         <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$10800</span></div>
                             <div class="detail-item"><span class="detail-label">Mileage</span><span
-                                    class="detail-value">121k km</span></div>
+                                    class="detail-value">110000</span></div>
                             <div class="detail-item"><span class="detail-label">Year</span><span
-                                    class="detail-value">2019</span></div>
+                                    class="detail-value">2024</span></div>
                             <div class="detail-item"><span class="detail-label">Trans</span><span
-                                    class="detail-value">Auto</span></div>
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">HATCHBACK</span></div>
                             <div class="detail-item"><span class="detail-label">Location</span><span
-                                    class="detail-value">Bulawayo</span></div>
+                                    class="detail-value">HARARE</span></div>
                         </div>
 
                         <div class="car-note">
-                            <span>Highlight</span>
-                            Double cab, Negotiable/Swaps.
+                            <span>Note</span>
+                            Recent , Solid Suspension
                         </div>
 
                         <button class="btn btn-outline" style="width: 100%;"
-                            onclick="sendWhatsApp('Toyota GD6 Legend 50')">Schedule Test Drive</button>
+                            onclick="sendWhatsApp('HONDA FIT GP5 HYBRID', '2024')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="SUV"
+                    data-fuel="Petrol" data-trans="AUTOMATIC" data-price="17000">
+
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="home-car-3-main" src="Cars/Honda Vezel SUV -/Main Image.jpeg" alt="HONDA VEZEL"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-3-main', 'Cars/Honda Vezel SUV -/Main Image.jpeg')"><img
+                                    src="Cars/Honda Vezel SUV -/Main Image.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-3-main', 'Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.36 (1).jpeg')">
+                                <img src="Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.36 (1).jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-3-main', 'Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.36 (2).jpeg')">
+                                <img src="Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.36 (2).jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-3-main', 'Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.37 (1).jpeg')">
+                                <img src="Cars/Honda Vezel SUV -/WhatsApp Image 2026-01-24 at 23.07.37 (1).jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">HONDA VEZEL</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$17000</span></div>
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">96403KM</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2016</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">SUV</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">BULAWAYO</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Note</span>
+                            Duty Paid
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('HONDA VEZEL', '2016')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="TRUCK"
+                    data-fuel="Petrol" data-trans="MANUAL" data-price="9800">
+
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="home-car-4-main" src="Cars/Isuzu KB300 -/Main image.jpeg" alt="ISUZU KB300"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-4-main', 'Cars/Isuzu KB300 -/Main image.jpeg')"><img
+                                    src="Cars/Isuzu KB300 -/Main image.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-4-main', 'Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.10.jpeg')">
+                                <img src="Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.10.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-4-main', 'Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.13.jpeg')">
+                                <img src="Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.13.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-4-main', 'Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.16.jpeg')">
+                                <img src="Cars/Isuzu KB300 -/WhatsApp Image 2026-01-07 at 16.37.16.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">ISUZU KB300</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$9800</span></div>
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">240000KM</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2010</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">MANUAL</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">TRUCK</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">BULAWAYO</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Note</span>
+                            One owner since new, South African make
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('ISUZU KB300', '2010')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;" data-type="SEDAN"
+                    data-fuel="Petrol" data-trans="AUTOMATIC" data-price="17000">
+
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="home-car-5-main" src="Cars/Mazda 6 Sport -/Main Image.jpeg"
+                                alt="MAZDA 6 SPORT 2017"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-5-main', 'Cars/Mazda 6 Sport -/Main Image.jpeg')"><img
+                                    src="Cars/Mazda 6 Sport -/Main Image.jpeg"></div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-5-main', 'Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17 (1).jpeg')">
+                                <img src="Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17 (1).jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-5-main', 'Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17 (2).jpeg')">
+                                <img src="Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17 (2).jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-5-main', 'Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17.jpeg')">
+                                <img src="Cars/Mazda 6 Sport -/WhatsApp Image 2025-12-29 at 12.40.17.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">MAZDA 6 SPORT 2017</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$17000</span></div>
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">64000KM</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2017</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">SEDAN</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">BULAWAYO</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Note</span>
+                            Perfect Condition
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('MAZDA 6 SPORT 2017', '2017')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+                <div class="service-card" style="padding: 0; overflow: hidden; background: white;"
+                    data-type="STATION WAGON" data-fuel="Hybrid" data-trans="AUTOMATIC" data-price="11800">
+
+                    <div style="padding: 1rem 1rem 0;">
+                        <div style="height: 250px; overflow: hidden; border-radius: 12px;">
+                            <img id="home-car-6-main" src="Cars/Toyota Probox Hybrid -/main image.jpeg"
+                                alt="TOYOTA PROBOX HYBRID"
+                                style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ">
+                        </div>
+                        <div class="thumb-grid">
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-6-main', 'Cars/Toyota Probox Hybrid -/main image.jpeg')">
+                                <img src="Cars/Toyota Probox Hybrid -/main image.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-6-main', 'Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.51.jpeg')">
+                                <img src="Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.51.jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-6-main', 'Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.52 (1).jpeg')">
+                                <img src="Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.52 (1).jpeg">
+                            </div>
+                            <div class="thumb-img"
+                                onclick="changeImage('home-car-6-main', 'Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.52 (2).jpeg')">
+                                <img src="Cars/Toyota Probox Hybrid -/WhatsApp Image 2026-02-02 at 17.26.52 (2).jpeg">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">TOYOTA PROBOX HYBRID</h4>
+
+                        <div class="car-details-grid">
+                            <div class="detail-item"><span class="detail-label">Price</span><span
+                                    class="detail-value">$11800</span></div>
+                            <div class="detail-item"><span class="detail-label">Mileage</span><span
+                                    class="detail-value">55563KM</span></div>
+                            <div class="detail-item"><span class="detail-label">Year</span><span
+                                    class="detail-value">2019</span></div>
+                            <div class="detail-item"><span class="detail-label">Trans</span><span
+                                    class="detail-value">AUTOMATIC</span></div>
+                            <div class="detail-item"><span class="detail-label">Type</span><span
+                                    class="detail-value">STATION WAGON</span></div>
+                            <div class="detail-item"><span class="detail-label">Location</span><span
+                                    class="detail-value">BULAWAYO</span></div>
+                        </div>
+
+                        <div class="car-note">
+                            <span>Note</span>
+                            ZINARA UP-TO-DATE
+                        </div>
+
+                        <button class="btn btn-outline" style="width: 100%;"
+                            onclick="sendWhatsApp('TOYOTA PROBOX HYBRID', '2019')">Schedule Test Drive</button>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: var(--color-white);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;" class="reveal-on-scroll">
+                <h2>What Our Happy Clients Say</h2>
+                <p class="text-grey">Don't just take our word for it.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-on-scroll">
+                    <p class="text-grey" style="position: relative; z-index: 1;">"I was skeptical about buying a car
+                        online, but Zyamutala made it so easy. The car was exactly as described and the paperwork was
+                        handled in record time."</p>
+                    <div class="user-profile">
+                        <div class="user-avatar">JM</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0px;">James Moyo</h4>
+                            <span class="text-grey" style="font-size: 0.8rem;">Bought a Honda Fit</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <p class="text-grey" style="position: relative; z-index: 1;">"Sold my Toyota Hilux in 3 days. They
+                        brought serious buyers only, handled the negotiations, and I got the price I wanted. Highly
+                        recommended."</p>
+                    <div class="user-profile">
+                        <div class="user-avatar">SN</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0px;">Sarah Ndlovu</h4>
+                            <span class="text-grey" style="font-size: 0.8rem;">Sold a Toyota Hilux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <p class="text-grey" style="position: relative; z-index: 1;">"Professional service from start to
+                        finish. The team at Zyamutala is transparent and honest. A breath of fresh air in the car
+                        market."</p>
+                    <div class="user-profile">
+                        <div class="user-avatar">TM</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 0px;">Tinashe M.</h4>
+                            <span class="text-grey" style="font-size: 0.8rem;">Bought a Mercedes C200</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: var(--color-light-grey);">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;" class="reveal-on-scroll">
+                <h2>Frequently Asked Questions</h2>
+                <p class="text-grey">Everything you need to know about buying and selling with us.</p>
+            </div>
+
+            <div class="faq-container reveal-on-scroll">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        How does Zyamutala ensure the cars are safe?
+                        <i data-lucide="chevron-down" class="faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We physically inspect every vehicle listed on our platform. We check the mechanical condition,
+                        verify ownership documents with Zinara and CVR, and ensure there are no outstanding police
+                        clearance issues.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        What are your fees?
+                        <i data-lucide="chevron-down" class="faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We charge a flat 5% commission fee on the final sale price. This fee covers our verification
+                        services, marketing, and negotiation support. There are no upfront fees to list your car.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Can I test drive a car before buying?
+                        <i data-lucide="chevron-down" class="faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. Once you're interested in a vehicle, we arrange a safe and convenient meeting place
+                        for you to inspect and test drive the car under our supervision.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        Do you offer payment plans?
+                        <i data-lucide="chevron-down" class="faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Currently, we facilitate cash transactions and bank transfers. We are working on partnerships
+                        with financial institutions to offer financing options in the future.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem;" class="reveal-on-scroll">
+                <h2>How It Works</h2>
+                <p class="text-grey">Simple, transparent, and fast.</p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card reveal-on-scroll">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Browse & Select</h4>
+                    <p class="text-grey">Explore our verified inventory. Every car has been physically inspected by our
+                        team.</p>
+                </div>
+                <div class="process-card reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Test Drive</h4>
+                    <p class="text-grey">Schedule a viewing. We accompany you to ensure a safe and professional
+                        experience.</p>
+                </div>
+                <div class="process-card reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <h4 style="margin-bottom: 1rem; font-size: 1.25rem;">Secure Payment</h4>
+                    <p class="text-grey">We handle the paperwork and facilitate the transaction. Drive away with peace
+                        of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Brands -->
+    <section class="section" style="background-color: var(--color-light-grey);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h4 style="color: var(--color-metallic); letter-spacing: 0.1em; text-transform: uppercase;">We Deal With
+                    Top Brands</h4>
+            </div>
+            <div class="brand-grid">
+                <!-- Toyota -->
+                <div class="brand-item" title="Toyota">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 3.848C5.223 3.848 0 7.298 0 12c0 4.702 5.224 8.152 12 8.152S24 16.702 24 12c0-4.702-5.223-8.152-12-8.152zm7.334 3.839c0 1.08-1.725 1.913-4.488 2.246-.26-2.58-1.005-4.279-1.963-4.913 2.948.184 6.45 1.227 6.45 2.667zM12 16.401c-.96 0-1.746-1.5-1.808-4.389.577.047 1.18.072 1.808.072.628 0 1.23-.025 1.807-.072-.061 2.89-.847 4.389-1.807 4.389zm0-6.308c-.59 0-1.155-.019-1.69-.054.261-1.728.92-3.15 1.69-3.15.77 0 1.428 1.422 1.689 3.15-.535.034-1.099.054-1.689.054zm-.882-5.075c-.956.633-1.706 2.333-1.964 4.915C6.391 9.6 4.665 8.767 4.665 7.687c0-1.44 3.504-2.49 6.453-2.669zM2.037 11.68a5.265 5.265 0 011.048-3.164c.27 1.547 2.522 2.881 5.972 3.37V12c0 3.772.879 6.203 2.087 6.97-5.107-.321-9.107-3.48-9.107-7.29zm10.823 7.29c1.207-.767 2.087-3.198 2.087-6.97v-.115c3.447-.488 5.704-1.826 5.972-3.37a5.26 5.26 0 011.049 3.165c-.004 3.81-4.008 6.969-9.109 7.29z" />
+                    </svg>
+                </div>
+
+                <!-- BMW -->
+                <div class="brand-item" title="BMW">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 .78C18.196.78 23.219 5.803 23.219 12c0 6.196-5.022 11.219-11.219 11.219C5.803 23.219.781 18.196.781 12S5.804.78 12 .78zm-.678.63c-.33.014-.66.042-.992.078l-.107 2.944a9.95 9.95 0 0 1 .71-.094l.07-1.988-.013-.137.043.13.664 1.489h.606l.664-1.488.04-.131-.01.137.07 1.988c.232.022.473.054.71.094l-.109-2.944a14.746 14.746 0 0 0-.992-.078l-.653 1.625-.023.12-.023-.12-.655-1.625zm6.696 1.824l-1.543 2.428c.195.15.452.371.617.522l1.453-.754.092-.069-.069.094-.752 1.453c.163.175.398.458.53.63l2.43-1.544a16.135 16.135 0 0 0-.46-.568L18.777 6.44l-.105.092.078-.115.68-1.356-.48-.48-1.356.68-.115.078.091-.106 1.018-1.539c-.18-.152-.351-.291-.57-.46zM5.5 3.785c-.36.037-.638.283-1.393 1.125a18.97 18.97 0 0 0-.757.914l2.074 1.967c.687-.76.966-1.042 1.508-1.613.383-.405.6-.87.216-1.317-.208-.242-.558-.295-.85-.175l-.028.01.01-.026a.7.7 0 0 0-.243-.734.724.724 0 0 0-.537-.15zm.006.615c.136-.037.277.06.308.2.032.14-.056.272-.154.382-.22.25-1.031 1.098-1.031 1.098l-.402-.383c.417-.51.861-.974 1.062-1.158a.55.55 0 0 1 .217-.139zM12 4.883a7.114 7.114 0 0 0-7.08 6.388v.002a7.122 7.122 0 0 0 8.516 7.697 7.112 7.112 0 0 0 5.68-6.97A7.122 7.122 0 0 0 12 4.885v-.002zm-5.537.242c.047 0 .096.013.14.043.088.059.128.16.106.26-.026.119-.125.231-.205.318l-1.045 1.12-.42-.4s.787-.832 1.045-1.099c.102-.106.168-.17.238-.205a.331.331 0 0 1 .14-.037zM12 5.818A6.175 6.175 0 0 1 18.182 12H12v6.182A6.175 6.175 0 0 1 5.818 12H12V5.818Z" />
+                    </svg>
+                </div>
+                <!-- Nissan -->
+                <div class="brand-item" title="Nissan">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.576 14.955l-.01.028c-1.247 3.643-4.685 6.086-8.561 6.086-3.876 0-7.32-2.448-8.562-6.09l-.01-.029H.71v.329l1.133.133c.7.08.847.39 1.038.78l.048.096c1.638 3.495 5.204 5.752 9.08 5.752 3.877 0 7.443-2.257 9.081-5.747l.048-.095c.19-.39.338-.7 1.038-.781l1.134-.134v-.328zM3.443 9.012c1.247-3.643 4.686-6.09 8.562-6.09 3.876 0 7.319 2.447 8.562 6.09l.01.028h2.728v-.328l-1.134-.133c-.7-.081-.847-.39-1.038-.781l-.047-.096C19.448 4.217 15.88 1.96 12.005 1.96c-3.881 0-7.443 2.257-9.081 5.752l-.048.095c-.19.39-.338.7-1.038.781l-1.133.133v.329h2.724zm13.862 1.586l-1.743 2.795h.752l.31-.5h2.033l.31.5h.747l-1.743-2.795zm1.033 1.766h-1.395l.7-1.124zm2.81-1.066l2.071 2.095H24v-2.795h-.614v2.085l-2.062-2.085h-.795v2.795h.619zM0 13.393h.619v-2.095l2.076 2.095h.781v-2.795h-.619v2.085L.795 10.598H0zm4.843-2.795h.619v2.795h-.62zm4.486 2.204c-.02.005-.096.005-.124.005H6.743v.572h2.5c.019 0 .167 0 .195-.005.51-.048.743-.472.743-.843 0-.381-.243-.79-.705-.833-.09-.01-.166-.01-.2-.01H7.643a.83.83 0 0 1-.181-.014c-.129-.034-.176-.148-.176-.243 0-.086.047-.2.18-.238a.68.68 0 0 1 .172-.014h2.357v-.562H7.6c-.1 0-.176.004-.238.014a.792.792 0 0 0-.695.805c0 .343.214.743.685.81.086.009.205.009.258.009H9.2c.029 0 .1 0 .114.005.181.023.243.157.243.276a.262.262 0 0 1-.228.266zm4.657 0c-.02.005-.096.005-.129.005H11.4v.572h2.5c.019 0 .167 0 .195-.005.51-.048.743-.472.743-.843 0-.381-.243-.79-.705-.833-.09-.01-.166-.01-.2-.01H12.3a.83.83 0 0 1-.181-.014c-.129-.034-.176-.148-.176-.243 0-.086.047-.2.18-.238a.68.68 0 0 1 .172-.014h2.357v-.562h-2.395c-.1 0-.176.004-.238.014a.792.792 0 0 0-.695.805c0 .343.214.743.686.81.085.009.204.009.257.009h1.59c.029 0 .1 0 .114.005.181.023.243.157.243.276a.267.267 0 0 1-.228.266Z" />
+                    </svg>
+                </div>
+                <!-- Honda -->
+                <div class="brand-item" title="Honda">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.902 6.87c-.33-3.218-2.47-3.895-4.354-4.204-.946-.16-2.63-.3-3.716-.34-.946-.06-3.168-.09-3.835-.09-.657 0-2.89.03-3.835.09-1.076.04-2.77.18-3.716.34C2.563 2.985.42 3.66.092 6.87c-.08.877-.1 2.023-.09 3.248.03 2.031.2 3.406.3 4.363.07.657.338 2.62.687 3.636.478 1.395.916 1.803 1.424 2.222.937.757 2.471.996 2.79 1.056 1.733.31 5.24.368 6.784.368 1.544 0 5.05-.05 6.784-.368.329-.06 1.863-.29 2.79-1.056.508-.419.946-.827 1.424-2.222.35-1.016.628-2.979.698-3.636.1-.957.279-2.332.299-4.363.04-1.225.01-2.371-.08-3.248m-1.176 5.4c-.19 2.57-.418 4.104-.747 5.22-.29.976-.637 1.623-1.165 2.092-.867.787-2.063.956-2.76 1.056-1.514.23-4.055.3-6.057.3-2.002 0-4.543-.08-6.057-.3-.697-.1-1.893-.269-2.76-1.056-.518-.469-.876-1.126-1.155-2.093-.329-1.105-.558-2.65-.747-5.22-.11-1.543-.09-4.054.08-5.4.258-2.011 1.255-3.018 3.387-3.396.996-.18 2.34-.31 3.606-.37 1.016-.07 2.7-.1 3.636-.09.936-.01 2.62.03 3.636.09 1.275.06 2.61.19 3.606.37 2.142.378 3.139 1.395 3.388 3.397.199 1.345.229 3.856.11 5.4m-5.202-8.39c-.548 2.462-.767 3.588-1.216 5.37-.428 1.715-.767 3.298-1.335 4.065-.587.777-1.365.947-1.893 1.006-.279.03-.478.04-1.066.05-.596 0-.796-.02-1.075-.05-.528-.06-1.315-.229-1.892-1.006-.578-.767-.907-2.35-1.335-4.064-.47-1.773-.678-2.91-1.236-5.37 0 0-.548.02-.797.04-.329.02-.588.05-.867.09.343 5.372.692 11.079 1.126 16.13a21.983 21.983 0 002.39.169c.33-1.266.748-3.02 1.207-3.767.378-.608.966-.677 1.295-.717.518-.07.956-.08 1.165-.08.2-.01.637 0 1.165.08.33.05.917.11 1.295.717.47.747.877 2.5 1.206 3.766 0 0 .358-.01 1.165-.05.41-.018.82-.058 1.226-.12.458-5.39.785-10.728 1.126-16.128-.28-.04-.538-.07-.867-.09-.23-.02-.787-.04-.787-.04z" />
+                    </svg>
+                </div>
+                <!-- Mazda -->
+                <div class="brand-item" title="Mazda">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.999 12.876c-.036 0-.105-.046-.222-.26a7.531 7.531 0 00-1.975-2.353A8.255 8.255 0 007.7 9.065a17.945 17.945 0 00-.345-.136c-1.012-.4-2.061-.813-3.035-1.377A8.982 8.982 0 014 7.362c.194-.34.42-.665.67-.962a6.055 6.055 0 011.253-1.131 7.126 7.126 0 011.618-.806c1.218-.434 2.677-.647 4.458-.649 1.783.002 3.241.215 4.459.65a7.097 7.097 0 011.619.805c.471.319.892.699 1.253 1.13.25.298.475.623.67.963-.103.064-.212.129-.32.192-.976.564-2.023.977-3.037 1.376l-.345.136a8.26 8.26 0 00-2.1 1.198 7.519 7.519 0 00-1.975 2.354c-.117.213-.187.259-.224.259m0 7.072c-1.544-.002-2.798-.129-3.83-.387-1.013-.252-1.855-.64-2.576-1.188a5.792 5.792 0 01-1.392-1.537 7.607 7.607 0 01-.81-1.768 10.298 10.298 0 01-.467-2.983c0-.674.047-1.313.135-1.901 1.106.596 2.153.895 3.08 1.16l.215.06c1.29.371 2.314.857 3.135 1.488.475.368.89.793 1.23 1.264.369.508.663 1.088.877 1.725.096.289.2.468.403.468.207 0 .308-.18.405-.468a6.124 6.124 0 012.107-2.988c.82-.632 1.845-1.118 3.135-1.489l.216-.06c.926-.265 1.973-.564 3.078-1.16.09.589.136 1.227.136 1.9 0 .458-.046 1.664-.465 2.984a7.626 7.626 0 01-.809 1.768 5.789 5.789 0 01-1.396 1.537c-.723.548-1.565.936-2.574 1.188-1.035.258-2.288.385-3.833.387m9.692-14.556c-1.909-2.05-4.99-2.99-9.692-2.995-4.7.005-7.781.944-9.69 2.994C.89 6.913 0 9.018 0 11.874c0 1.579.39 5.6 3.564 7.676 1.9 1.242 4.354 2.046 8.435 2.052 4.083-.006 6.536-.81 8.437-2.052C23.609 17.474 24 13.452 24 11.874c0-2.848-.897-4.968-2.31-6.483Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="container" style="padding: 2rem 1.5rem;">
+        <div class="cta-section reveal-on-scroll">
+            <h2>Ready to find your dream car?</h2>
+            <p>Join hundreds of satisfied customers who trust Zyamutala for their vehicle needs.</p>
+            <div class="cta-btns">
+                <a href="market.html" class="btn cta-primary">Browse Cars</a>
+                <a href="contact.html" class="btn btn-outline cta-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col" style="flex: 2;">
-                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
-                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
-                        </div>
-                        ZYAMUTALA
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem; display: block;">
+                        <img src="assets/logo.png" alt="Zyamutala Logo"
+                            style="height: 45px; width: auto; filter: brightness(0) invert(1);">
                     </a>
                     <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
                         Connecting buyers and sellers across Zimbabwe. <br>
@@ -358,9 +766,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="#">+263 78 462 4431</a></li>
-                        <li><a href="#">info@zyamutala.co.zw</a></li>
-                        <li>Bulawayo, Zimbabwe</li>
+                        <li><a href="https://wa.me/263784624431">+263 78 462 4431</a></li>
+                        <li><a href="mailto:info@zyamutala.co.zw">info@zyamutala.co.zw</a></li>
                     </ul>
                 </div>
             </div>
@@ -373,6 +780,13 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/263784624431" target="_blank" class="floating-chat" title="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+        </svg>
+    </a>
 
     <script src="script.js"></script>
 </body>

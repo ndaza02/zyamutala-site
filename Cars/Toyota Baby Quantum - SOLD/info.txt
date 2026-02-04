@@ -1,0 +1,10 @@
+Name: TOYOTA BABY QUANTUM
+Year: N/A
+Type: MINI VAN
+Price: $22000
+Mileage: 93000KM
+Transmission:AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: SOLD
+Read More: 1KD Engine

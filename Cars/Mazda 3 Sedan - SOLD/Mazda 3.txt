@@ -1,0 +1,10 @@
+Name: MAZDA 3
+Year: 2004
+Type: SEDAN
+Price: $5800
+Mileage: 129000KM
+Transmission: MANUAL
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: SOLD
+Read More: Clean in and out, reduced to go

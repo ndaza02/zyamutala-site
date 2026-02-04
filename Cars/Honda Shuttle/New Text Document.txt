@@ -5,3 +5,4 @@
 - Condition: Recent import, duty paid
 - Price: $13,000 USD
 - Zinara up-to-date
+- SOLD

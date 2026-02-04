@@ -1,0 +1,10 @@
+Name: TOYOTA VITS
+Year: 2016
+Type: HATCHBACK
+Price: $10800
+Mileage: 145276KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Clean, fuel-efficient
