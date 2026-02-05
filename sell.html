@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell Your Car | Zyamutala</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta property="og:title" content="Sell Your Car | Zyamutala">
+    <meta property="og:description" content="The fastest way to sell your vehicle in Zimbabwe. 5% flat commission.">
+    <meta property="og:image" content="assets/preview.jpg">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         .page-header {
@@ -68,8 +72,7 @@
     <header>
         <div class="container nav-content">
             <a href="index.html" class="logo">
-                <div class="logo-icon"><i data-lucide="car-front"></i></div>
-                ZYAMUTALA
+                <img src="assets/logo.png" alt="Zyamutala Logo" style="height: 45px; width: auto;">
             </a>
             <nav class="desktop-nav">
                 <a href="index.html">Home</a>
@@ -89,22 +92,35 @@
         </div>
     </header>
 
-    <!-- Sell Page Hero -->
-    <div class="hero"
-        style="height: 50vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('Hero Images/Hero 1.jpg'); display: flex; align-items: center; justify-content: center; text-align: center;">
-        <div class="container">
-            <h1 class="reveal-on-scroll" style="font-size: 3.5rem; margin-bottom: 1rem; color: #ffffff;">Sell with
-                Zyamutala</h1>
-            <p class="text-white reveal-on-scroll"
-                style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; color: #ffffff;">
-                Get the best value for your vehicle. We handle the negotiations, marketing, and paperwork for a flat 5%
-                commission.
+    <!-- Sell Introduction Section -->
+    <section class="section" style="padding: 120px 0 6rem; background-color: white;">
+        <div class="container" style="text-align: center;">
+            <h1 class="reveal-on-scroll" style="font-size: 3rem; margin-bottom: 2rem; color: var(--color-black);">Sell
+                Your Vehicle with Ease</h1>
+            <p class="reveal-on-scroll"
+                style="max-width: 750px; margin: 0 auto 2.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-mid-grey);">
+                At Zyamutala, we take the stress out of selling your car. Our premium brokerage service ensures your
+                vehicle gets viewed by serious buyers across Zimbabwe. We handle everything from high-quality marketing
+                and expert negotiations to the final paperwork—all for a transparent flat 5% commission.
+                <br><br>
+                Use our calculator below to see your potential payout, then simply fill out the form to list your car
+                today.
             </p>
-        </div>
-    </div>
-
-    <section class="section">
-        <div class="container">
+            <div class="reveal-on-scroll"
+                style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
+                <span
+                    style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 50px; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 500; color: #64748b; display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="check-circle" style="width: 16px; color: #10b981;"></i> Flat 5% Commission
+                </span>
+                <span
+                    style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 50px; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 500; color: #64748b; display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="check-circle" style="width: 16px; color: #10b981;"></i> Professional Marketing
+                </span>
+                <span
+                    style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 50px; padding: 0.5rem 1.25rem; font-size: 0.9rem; font-weight: 500; color: #64748b; display: flex; align-items: center; gap: 0.5rem;">
+                    <i data-lucide="check-circle" style="width: 16px; color: #10b981;"></i> Verified Buyers
+                </span>
+            </div>
 
             <!-- Calculator -->
             <div class="calculator-box reveal-on-scroll">
@@ -127,66 +143,249 @@
                 </div>
             </div>
 
-            <!-- Form -->
-            <div style="max-width: 800px; margin: 4rem auto 0;" class="reveal-on-scroll">
-                <h3 style="margin-bottom: 2rem;">Submit Your Vehicle</h3>
-                <form onsubmit="event.preventDefault(); alert('Submission received! Example only.');"
-                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <!-- Form Section -->
+            <div id="form-container" style="max-width: 800px; margin: 4rem auto 0; text-align: left;"
+                class="reveal-on-scroll">
+                <h3 style="margin-bottom: 2rem; text-align: center;">Submit Your Vehicle</h3>
+                <form action="https://formsubmit.co/info@zyamutala.co.zw" method="POST" enctype="multipart/form-data"
+                    class="sell-form" id="sellForm">
 
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <label>Vehicle Title (Year, Make, Model)</label>
-                        <input type="text" class="form-control" placeholder="e.g. 2020 Toyota Fortuner">
-                    </div>
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Sell Your Car Submission">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://zyamutala.co.zw/sell.html?success=true">
 
-                    <div class="input-group">
-                        <label>Mileage (km)</label>
-                        <input type="number" class="form-control" placeholder="e.g. 85000">
-                    </div>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div class="input-group">
+                            <label>Your Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                        </div>
 
-                    <div class="input-group">
-                        <label>Transmission</label>
-                        <select class="form-control">
-                            <option>Automatic</option>
-                            <option>Manual</option>
-                            <option>CVT</option>
-                        </select>
-                    </div>
+                        <div class="input-group">
+                            <label>WhatsApp Number</label>
+                            <input type="text" name="phone" class="form-control" placeholder="e.g. +263 77 123 4567"
+                                required>
+                        </div>
 
-                    <div class="input-group">
-                        <label>Price (USD)</label>
-                        <input type="number" class="form-control" placeholder="Asking Price">
-                    </div>
+                        <div class="input-group">
+                            <label>Vehicle Title (Year, Make, Model)</label>
+                            <input type="text" name="vehicle_title" class="form-control"
+                                placeholder="e.g. 2020 Toyota Fortuner" required>
+                        </div>
 
-                    <div class="input-group">
-                        <label>Condition</label>
-                        <select class="form-control">
-                            <option>Excellent</option>
-                            <option>Good</option>
-                            <option>Fair</option>
-                            <option>Needs Work</option>
-                        </select>
-                    </div>
+                        <div class="input-group">
+                            <label>Location</label>
+                            <input type="text" name="location" class="form-control" placeholder="e.g. Bulawayo"
+                                required>
+                        </div>
 
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <label>Additional Notes</label>
-                        <textarea class="form-control" rows="4"
-                            placeholder="Any special features, recent service history, or negotiation terms..."></textarea>
-                    </div>
+                        <div class="input-group">
+                            <label>Mileage (km)</label>
+                            <input type="number" name="mileage" class="form-control" placeholder="e.g. 85000" required>
+                        </div>
 
-                    <div class="input-group" style="grid-column: 1 / -1;">
-                        <label>Upload Photos (Exterior & Interior)</label>
-                        <div
-                            style="border: 2px dashed #ccc; padding: 2rem; border-radius: 12px; text-align: center; cursor: pointer;">
-                            <i data-lucide="upload-cloud" style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
-                            <p>Click to upload or drag and drop</p>
-                            <p class="text-grey" style="font-size: 0.8rem;">Max 10 images. JPG, PNG.</p>
+                        <div class="input-group">
+                            <label>Transmission</label>
+                            <select name="transmission" class="form-control">
+                                <option value="Automatic">Automatic</option>
+                                <option value="Manual">Manual</option>
+                                <option value="CVT">CVT</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Price (USD)</label>
+                            <input type="number" name="price" class="form-control" placeholder="Asking Price" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Condition</label>
+                            <select name="condition" class="form-control">
+                                <option value="Excellent">Excellent</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Needs Work">Needs Work</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label>Additional Notes</label>
+                            <textarea name="notes" class="form-control" rows="4"
+                                placeholder="Any special features, recent service history, or negotiation terms..."></textarea>
+                        </div>
+
+                        <div class="input-group" style="grid-column: 1 / -1;">
+                            <label>Upload Photos (Exterior & Interior)</label>
+                            <input type="file" name="attachment[]" id="attachment" class="form-control"
+                                accept="image/png, image/jpeg" style="padding: 1rem;" multiple>
+                            <p class="text-grey" id="file-limit-msg" style="font-size: 0.8rem; margin-top: 0.5rem;">
+                                Select
+                                your best photos (Max total 10MB)</p>
+                            <div id="file-error"
+                                style="color: #ef4444; font-size: 0.85rem; margin-top: 0.5rem; display: none; font-weight: 500;">
+                                <i data-lucide="alert-circle"
+                                    style="width: 14px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>
+                                <span>Total file size exceeds 10MB limit. Please remove some photos.</span>
+                            </div>
+                        </div>
+
+                        <div style="grid-column: 1 / -1;">
+                            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Submit for
+                                Review</button>
                         </div>
                     </div>
-
-                    <div style="grid-column: 1 / -1;">
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit for Review</button>
-                    </div>
                 </form>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-card"
+                style="display: none; max-width: 600px; margin: 6rem auto; text-align: center; padding: 4rem 2rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; box-shadow: var(--shadow-md);">
+                <div
+                    style="width: 80px; height: 80px; background: #10b981; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
+                    <i data-lucide="check-circle-2" style="width: 48px; height: 48px;"></i>
+                </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--color-black);">Submission Received!
+                </h2>
+                <p style="font-size: 1.25rem; line-height: 1.6; color: var(--color-mid-grey); margin-bottom: 3rem;">
+                    Thank you for listing your vehicle with Zyamutala. Our team has received your details and will
+                    review them shortly. We'll contact you via WhatsApp for the next steps.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="market.html" class="btn btn-primary">Browse Market</a>
+                    <a href="sell.html" class="btn btn-secondary"
+                        style="background: white; border: 1px solid #ddd;">Submit Another Car</a>
+                </div>
+            </div>
+
+            <!-- Why Sell With Us -->
+            <div style="margin-top: 8rem;" class="reveal-on-scroll">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Why Sell with Zyamutala?</h2>
+                    <p style="color: var(--color-metallic); max-width: 600px; margin: 0 auto;">We make car selling
+                        professional, safe, and efficient.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal-on-scroll"
+                        style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; background: #fff; border: 1px solid #f1f5f9; box-shadow: 0 4px 20px -5px rgba(0,0,0,0.05); padding: 2rem;">
+                        <div class="service-icon"
+                            style="background: var(--color-black); color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i data-lucide="shield-check" style="width: 24px;"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Safe & Secure</h4>
+                        <p style="color: var(--color-mid-grey); font-size: 0.95rem; line-height: 1.6;">Avoid meeting
+                            strangers or handling large sums of cash. We act as a trusted intermediary for
+                            all transactions.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll"
+                        style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; background: #fff; border: 1px solid #f1f5f9; box-shadow: 0 4px 20px -5px rgba(0,0,0,0.05); padding: 2rem;">
+                        <div class="service-icon"
+                            style="background: var(--color-black); color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i data-lucide="megaphone" style="width: 24px;"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Expert Marketing</h4>
+                        <p style="color: var(--color-mid-grey); font-size: 0.95rem; line-height: 1.6;">We feature your
+                            vehicle on our premium platform and social media networks to find the right
+                            buyer quickly.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll"
+                        style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; background: #fff; border: 1px solid #f1f5f9; box-shadow: 0 4px 20px -5px rgba(0,0,0,0.05); padding: 2rem;">
+                        <div class="service-icon"
+                            style="background: var(--color-black); color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <i data-lucide="handshake" style="width: 24px;"></i>
+                        </div>
+                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Professional Closing</h4>
+                        <p style="color: var(--color-mid-grey); font-size: 0.95rem; line-height: 1.6;">We handle all
+                            negotiations and the complex paperwork, ensuring a smooth hand-over for both
+                            parties.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Process -->
+            <div style="margin-top: 8rem;" class="reveal-on-scroll">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Simple Process</h2>
+                    <p style="color: var(--color-metallic);">Four easy steps to get your cash.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--color-black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: 700; font-size: 1.25rem;">
+                            1</div>
+                        <h4>Submit Form</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-mid-grey);">Fill in the details above and attach
+                            photos of your car.</p>
+                    </div>
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--color-black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: 700; font-size: 1.25rem;">
+                            2</div>
+                        <h4>Inspection</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-mid-grey);">We'll contact you to verify details
+                            and arrange a quick physical check.</p>
+                    </div>
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--color-black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: 700; font-size: 1.25rem;">
+                            3</div>
+                        <h4>Live Listing</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-mid-grey);">Your car goes live on our market for
+                            thousands of buyers to see.</p>
+                    </div>
+                    <div class="reveal-on-scroll" style="text-align: center;">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--color-black); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-weight: 700; font-size: 1.25rem;">
+                            4</div>
+                        <h4>Sold!</h4>
+                        <p style="font-size: 0.9rem; color: var(--color-mid-grey);">Once a buyer is found, we close the
+                            deal and you get your payout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div style="margin-top: 8rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+                class="reveal-on-scroll">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Frequent Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>How long does it take to sell?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most vehicles list and sell within 2 to 4 weeks depending on the price and demand for the
+                                model. We work hard to find buyers as quickly as possible.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Who handles the logbook and transfer?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We facilitate the entire process! We ensure all necessary documents are prepared so the
+                                transfer of ownership is legally compliant and hassle-free.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Are there any upfront fees?</span>
+                            <i data-lucide="chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No. Listing with Zyamutala is free. We only earn our 5% commission once your vehicle is
+                                successfully sold.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -197,10 +396,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col" style="flex: 2;">
-                    <a href="#" class="logo" style="color: white; margin-bottom: 1rem;">
-                        <div class="logo-icon" style="background: white; color: black;"><i data-lucide="car-front"></i>
-                        </div>
-                        ZYAMUTALA
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem; display: block;">
+                        <img src="assets/logo.png" alt="Zyamutala Logo"
+                            style="height: 45px; width: auto; filter: brightness(0) invert(1);">
                     </a>
                     <p style="color: var(--color-metallic); max-width: 300px; margin-bottom: 1.5rem;">
                         Connecting buyers and sellers across Zimbabwe. <br>
@@ -224,9 +422,8 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
-                        <li><a href="#">+263 78 462 4431</a></li>
-                        <li><a href="#">info@zyamutala.co.zw</a></li>
-                        <li>Bulawayo, Zimbabwe</li>
+                        <li><a href="https://wa.me/263784624431">+263 78 462 4431</a></li>
+                        <li><a href="mailto:info@zyamutala.co.zw">info@zyamutala.co.zw</a></li>
                     </ul>
                 </div>
             </div>
@@ -240,6 +437,12 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/263784624431" target="_blank" class="floating-chat" title="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+        </svg>
+    </a>
     <script src="script.js"></script>
 </body>
 
