@@ -1,0 +1,10 @@
+Name: MAZDA PREMACY
+Year: 2002
+Type: STATION WAGON 
+Price: $3800
+Mileage: 151743KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Clean, Suspension 80%, 2L Petrol Engine, Gearbox Solid

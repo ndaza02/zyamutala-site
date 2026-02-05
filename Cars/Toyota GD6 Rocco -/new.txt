@@ -1,0 +1,10 @@
+Name: TOYOTA GD6 ROCCO
+Year: 2023
+Type: TRUCK
+Price: $60000
+Mileage: 5755KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE 
+Read More: Recent import, Duty paid

@@ -1,0 +1,10 @@
+Name: TOYOTA SIENTA HYBRID
+Year: 2016
+Type: MINI VAN
+Price: $10800
+Mileage: 159000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Start and go

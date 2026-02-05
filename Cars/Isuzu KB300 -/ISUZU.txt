@@ -1,0 +1,10 @@
+Name: ISUZU KB300
+Year: 2010
+Type: TRUCK
+Price: $9800
+Mileage: 240000KM
+Transmission: MANUAL
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE 
+Read More: One owner since new, South African make

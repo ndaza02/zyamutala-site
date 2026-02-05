@@ -1,0 +1,10 @@
+Name: SUNLONG BUS
+Year: 2024
+Type: BUS
+Price: $160000
+Mileage: Delivery Mileage
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: HARARE
+Status: AVAILABLE
+Read More: Brand new, 48 seater

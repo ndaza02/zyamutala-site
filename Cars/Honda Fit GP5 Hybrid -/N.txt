@@ -1,0 +1,10 @@
+Name: HONDA FIT GP5 HYBRID
+Year: 2024
+Type: HATCHBACK
+Price: $10800
+Mileage: 110000
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: HARARE
+Status: AVAILABLE
+Read More: Recent , Solid Suspension 

@@ -1,0 +1,10 @@
+Name: TOYOTA COROLLA
+Year: 2016
+Type: SEDAN
+Price: $10000
+Mileage: 74650KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: 

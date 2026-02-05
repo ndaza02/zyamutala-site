@@ -1,0 +1,10 @@
+Name: NISSAN XTRAIL
+Year: 2015
+Type: SUV
+Price: $13800
+Mileage: 122000KM
+Transmission: $13800
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: SOLD 
+Read More: New shape

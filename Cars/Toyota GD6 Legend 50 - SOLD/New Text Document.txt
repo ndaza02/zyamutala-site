@@ -1,0 +1,10 @@
+Name: TOYOTA GD6 LEGEND 50
+Year: 2019
+Type: TRUCK
+Price: $48000
+Mileage: 121000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: SOLD
+Read More: 4X4, Double Cab, South African 

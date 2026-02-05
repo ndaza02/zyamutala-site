@@ -1,0 +1,10 @@
+Name: TOYOTA MARK X
+Year: 2019
+Type: SEDAN
+Price: $19800
+Mileage: 68560KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Duty paid

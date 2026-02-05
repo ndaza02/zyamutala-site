@@ -1,0 +1,10 @@
+Name: NISSAN ATLAS
+Year: 2017
+Type: TRUCK
+Price: $16500
+Mileage: 87000KM
+Transmission: MANUAL
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Petrol Engine, Recent Import

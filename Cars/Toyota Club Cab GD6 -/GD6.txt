@@ -1,0 +1,10 @@
+Name: TOYOTA GD6 
+Year: 2018
+Type: TRUCK
+Price: $38000
+Mileage: 102759KM
+Transmission: MANUAL
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Club Cab, recent import 

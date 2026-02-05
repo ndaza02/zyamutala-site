@@ -1,0 +1,10 @@
+Name: TOYOTA HILUX GD6
+Year: 2016
+Type: TRUCK
+Price: $35500
+Mileage: 77000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: N/A
+Status: AVAILABLE
+Read More: 2.8L Diesel, Double cab, Facelift

@@ -1,0 +1,10 @@
+Name: TOYOTA HILUX D4D
+Year: 2015
+Type: TRUCK
+Price: $30000
+Mileage: 189000KM
+Transmission: MANUAL
+Zinara: UP-TO-DATE
+Location: HARARE
+Status: AVAILABLE
+Read More: Solid Drive, Duty paid 
