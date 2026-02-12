@@ -1,0 +1,10 @@
+Name: MAZDA DEMIO
+Year: 2018
+Type: HATCHBACK
+Price: $9500
+Mileage: 121000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Clean, Runs Smoothly, Petrol

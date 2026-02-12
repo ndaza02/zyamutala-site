@@ -1,0 +1,10 @@
+Name: TOYOTA GD6 RAIDER
+Year: 2021
+Type: TRUCK
+Price: $58000
+Mileage: 121000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Duty paid, Mint Condition 

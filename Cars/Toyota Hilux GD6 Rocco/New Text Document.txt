@@ -1,0 +1,10 @@
+Name: TOYOTA HILUX GD6 ROCCO
+Year: 2021
+Type: TRUCK
+Price: $58000
+Mileage: 35000KM
+Transmission: AUTOMATIC
+Zinara: UP-TO-DATE
+Location: BULAWAYO
+Status: AVAILABLE
+Read More: Superflex Suspension, Duty fully paid, 4x2 Drive
