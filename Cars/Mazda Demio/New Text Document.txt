@@ -1,4 +1,4 @@
-Name: MAZDA DEMIO
+Name: Mazda Demio
 Year: 2018
 Type: HATCHBACK
 Price: $9500
