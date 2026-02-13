@@ -261,7 +261,7 @@ function generateCarCard(car, index, isHome = false) {
     <div class="service-card" style="padding: 0; overflow: hidden; background: white;" 
         data-type="${car.type}" data-fuel="${car.fuel}" data-trans="${car.trans}" data-price="${numericPrice}">
         ${soldBadge}
-        <div style="padding: 1rem 1rem 0;">
+        <div class="card-image-section" style="padding: 1rem 1rem 0;">
             <!-- Wrap Image in Link -->
             <a href="${detailLink}" style="display:block;">
                 <div style="height: 250px; overflow: hidden; border-radius: 12px;">
@@ -273,7 +273,7 @@ function generateCarCard(car, index, isHome = false) {
                 ${thumbsHtml}
             </div>
         </div>
-        <div style="padding: 1.5rem;">
+        <div class="card-info-section" style="padding: 1.5rem;">
             <a href="${detailLink}">
                 <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">${car.name}</h4>
             </a>

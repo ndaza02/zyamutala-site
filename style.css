@@ -1298,3 +1298,25 @@ footer {
         gap: 1.5rem;
     }
 }
+/* --- Card Alignment Fixes --- */
+.card-info-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.service-card h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3rem; /* Approx 2 lines */
+}
+
+.car-note {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1; /* Allow it to take available space but clamp if too long */
+}
