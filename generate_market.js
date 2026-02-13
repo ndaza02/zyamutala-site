@@ -74,7 +74,7 @@ folders.forEach(folder => {
     const images = files.filter(f => /\.(jpe?g|png|webp)$/i.test(f)).map(f => path.join(CARS_DIR, folder, f).replace(/\\/g, '/'));
 
     // Find main image
-    let mainImg = images.find(img => img.toLowerCase().includes('main image')) || images[0] || 'assets/placeholder.jpg';
+    let mainImg = images.find(img => img.toLowerCase().includes('main image')) || images[0] || 'assets/placeholder.png';
 
     // Other images for thumbnails (up to 4)
     const thumbs = images.filter(img => img !== mainImg).slice(0, 4);
@@ -97,7 +97,7 @@ function generateCarCard(car, index, isHome = false) {
     let thumbsHtml = '';
     const allThumbs = [car.mainImg, ...car.thumbs].slice(0, 4);
     allThumbs.forEach(img => {
-        thumbsHtml += `<div class="thumb-img" onclick="changeImage('${carId}-main', '${img}')"><img src="${img}"></div>`;
+        thumbsHtml += `<div class="thumb-img" onclick="changeImage('${carId}-main', '${img}')"><img src="${img}" onerror="this.onerror=null;this.src='assets/placeholder.png';"></div>`;
     });
 
     const numericPrice = parseInt(car.price.replace(/[^0-9]/g, '')) || 0;
@@ -109,7 +109,7 @@ function generateCarCard(car, index, isHome = false) {
         <div style="padding: 1rem 1rem 0;">
             <div style="height: 250px; overflow: hidden; border-radius: 12px;">
                 <img id="${carId}-main" src="${car.mainImg}" alt="${car.name}"
-                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ${imgFilter}">
+                    style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; ${imgFilter}" onerror="this.onerror=null;this.src='assets/placeholder.png';">
             </div>
             <div class="thumb-grid">
                 ${thumbsHtml}
@@ -145,17 +145,11 @@ injectHtml(MARKET_FILE, '<div class="cars-grid">', marketCarsHtml);
 // 3. Generate and Inject into index.html (Featured Vehicles - 6 Available)
 const availableCars = cars.filter(c => !c.isSold).slice(0, 6);
 const homeCarsHtml = availableCars.map((car, i) => generateCarCard(car, i, true)).join('\n');
-injectHtml(INDEX_FILE, '<div class="services-grid">', homeCarsHtml, true); // Search for the second occurrence or handle specifically
+injectHtml(INDEX_FILE, '<div class="featured-grid">', homeCarsHtml, true);
 
 function injectHtml(filePath, startMarker, content, isHome = false) {
     const originalHtml = fs.readFileSync(filePath, 'utf8');
     let startIndex = originalHtml.indexOf(startMarker);
-
-    if (isHome) {
-        // For index.html, the first .services-grid is "Why Zimbabwe Trusts Zyamutala"
-        // The second one is "Featured Vehicles"
-        startIndex = originalHtml.indexOf(startMarker, startIndex + startMarker.length);
-    }
 
     if (startIndex === -1) {
         console.error(`Could not find ${startMarker} in ${filePath}`);
@@ -165,14 +159,20 @@ function injectHtml(filePath, startMarker, content, isHome = false) {
     const splitPoint = startIndex + startMarker.length;
 
     // Find the end marker (closing div of the grid)
-    // We assume the grid content ends before the next major section or footer
-    let endMarker = isHome ? '</section>' : '</div>';
     let searchEndIndex = isHome ? originalHtml.indexOf('<!-- Testimonials Section -->') : originalHtml.indexOf('</main>');
 
     if (isHome) {
-        // In index.html, the featured section ends before Testimonials
-        const featuredSectionEnd = originalHtml.lastIndexOf('</div>', searchEndIndex);
-        const finalHtml = originalHtml.substring(0, splitPoint) + '\n' + content + '\n' + originalHtml.substring(featuredSectionEnd);
+        // In index.html, we need to find the closing div of the featured-grid
+        // Searching backwards from Testimonials:
+        // 1. </section> (sometimes)
+        // 2. </div> (container)
+        // 3. </div> (featured-grid) -> This is what we want
+
+        // Let's safe-guard by finding the last </div> before the section end
+        let endPos = originalHtml.lastIndexOf('</div>', searchEndIndex); // container close
+        endPos = originalHtml.lastIndexOf('</div>', endPos - 1); // featured-grid close
+
+        const finalHtml = originalHtml.substring(0, splitPoint) + '\n' + content + '\n' + originalHtml.substring(endPos);
         fs.writeFileSync(filePath, finalHtml);
     } else {
         // In market.html, it's simpler
