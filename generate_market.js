@@ -116,8 +116,8 @@ cars.forEach(car => {
     const numericPrice = parseInt(car.price.replace(/[^0-9]/g, '')) || 0;
 
     // SEO & Meta
-    const metaTitle = `Buy ${car.name} in Bulawayo`;
-    const metaDesc = `For Sale: ${car.name} - ${car.year} model. ${car.note.substring(0, 100)}... Available at Zyamutala.`;
+    const metaTitle = `${car.name} for Sale | Zyamutala Car Dealership`;
+    const metaDesc = `Buy a verified ${car.name} (${car.year}) at Zyamutala Car Dealership in Bulawayo. ${car.note.substring(0, 100)}... Secure, fast, and affordable.`;
 
     // Schema.org
     const schema = {
